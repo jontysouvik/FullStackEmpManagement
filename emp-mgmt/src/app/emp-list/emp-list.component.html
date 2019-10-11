@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row mt-5 mb-5">
+      <div class="col-md-10">
+        <h1 class="banner">
+          <img class="lit" src="./../../../assets/fire.png" alt="Lit"><img class="lit" src="./../../../assets/fire.png" alt="Lit">
+          Employees<i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-female"
+            aria-hidden="true"></i>
+        </h1>
+      </div>
+      <div class="col-md-2"><button class="btn btn-primary btn-add" (click)="addEmployee()">Add Employee<i
+            class="fa fa-plus-circle" aria-hidden="true"></i></button></div>
+    </div>
+    <div class="row emp-row mb-3" *ngFor="let emp of employees;let i = index">
+      <div class="col-md-1">
+        <img src="./../../../assets/{{emp.sex.toString().toLowerCase()}}.svg" class="avatar">
+      </div>
+      <div class="col-md-2"><span class="text">{{emp.name}}</span></div>
+      <div class="col-md-1"><span class="text">{{emp.sex}}</span></div>
+      <div class="col-md-5"><span class="text">{{emp.comments}}</span></div>
+      <div class="col-md-3">
+        <button class="btn btn-success mb-1 mt-1" (click)="editEmployee(emp.id)">Edit<i class="fa fa-pencil"
+            aria-hidden="true"></i></button>
+        <button class="btn btn-danger mb-1 mt-1" (click)="deleteEmployee(emp.id)">Delete<i class="fa fa-trash"
+            aria-hidden="true"></i></button></div>
+    </div>
+  </div>
+</div>

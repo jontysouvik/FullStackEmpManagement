@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-2"><button class="btn btn-primary" (click)="goToList()"><i class="fa fa-chevron-left" aria-hidden="true"></i>Employee List</button></div>
+      <div class="col-md-8"> </div>
+      <div class="col-md-2"><button class="btn btn-primary btn-random" (click)="fillRandomData()">Randomise<i class="fa fa-random" aria-hidden="true"></i></button></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <form (ngSubmit)="saveEmployee()" #flogin="ngForm">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input type="text" class="form-control" id="emailLogin" name="emailLogin" placeholder="Name"
+                  [(ngModel)]="name" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <!-- <input type="text" class="form-control" name="passwordLogin" id="passwordLogin" placeholder="Sex"
+                  [(ngModel)]="sex" required> -->
+                  <select name="sex" id="sex" class="form-control" [(ngModel)]="sex" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="comments" id="comments" placeholder="Comments"
+                    [(ngModel)]="comments" required>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <button type="submit" [disabled]="!flogin.valid" class="btn btn-success btn-save">Save<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                <label class="btn btn-danger btn-cancel" (click)="goToList()">Cancel<i class="fa fa-ban" aria-hidden="true"></i></label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.btn-danger {
+  margin-right: 10px;
+}
+.fa-chevron-left {
+  margin-right: 5px;
+}
+.btn-save,
+.btn-cancel,
+.btn-random {
+  float: right;
+}
+.fa-random, .fa-floppy-o, .fa-ban {
+  margin-left: 5px;
+}
+

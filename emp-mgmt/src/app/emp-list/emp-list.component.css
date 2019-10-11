@@ -1,0 +1,72 @@
+.avatar {
+  height: 2rem;
+  width: 2rem;
+  background-color: antiquewhite;
+  margin-top: 4.5px;
+  border-radius: 2px;
+}
+
+.emp-row {
+  /* border: 0.5px solid blanchedalmond; */
+  background-color: #333333;
+  border-radius: 5px;
+  min-height: 40px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.text {
+  position: absolute;
+  top: 8.5px;
+}
+
+.fa {
+  margin-left: 5px;
+}
+
+.btn-add {
+  float: right;
+  margin-right: -14px;
+  margin-top: 26px;
+}
+
+.btn-success {
+  float: right;
+  margin-right: -11px;
+}
+
+.btn-danger {
+  float: right;
+}
+
+.banner {
+  margin-left: -14px;
+}
+
+.lit {
+  width: 80px;
+}
+.fa-female{
+  animation-name: female;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate ;
+  animation-timing-function: ease-in-out;
+}
+.fa-male{
+  animation-name: male;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate ;
+  animation-timing-function: ease-in-out;
+}
+@keyframes male {
+  from {color: green;}
+  to {color: red;}
+}
+@keyframes female {
+  from {color: red;}
+  to {color: green;}
+}
